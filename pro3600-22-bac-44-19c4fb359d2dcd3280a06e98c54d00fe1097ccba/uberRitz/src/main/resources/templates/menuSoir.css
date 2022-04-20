@@ -1,0 +1,50 @@
+@charset "UTF-8";
+.d-grid {
+	position : fixed;
+}
+
+h1 {
+	margin-left: 50px; 
+	margin-top:40px;
+	font-size:80px;
+}
+
+body { 
+	background-image : url("Background4.PNG");
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+  	background-size: 1450px 720px;
+}
+
+.menuButton {
+	background-color : Transparent;
+	margin-left: 40px;
+	margin-right: 70px;
+	margin-top:80px;
+	border: none;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.platButton {
+	background-color : Transparent;
+	margin-left: 40px;
+	margin-right: 70px;
+	margin-top:40px;
+	border: none;
+	font-size: 40px;
+	font-weight: bold;
+}
+
+.btn-group-vertical {
+	margin-top:220px;
+	position: fixed;
+}
+
+.img-fluid {
+	height: 44px;
+	width: 66px;
+	margin-right: 100px;
+	margin-top:190px;
+}
+
