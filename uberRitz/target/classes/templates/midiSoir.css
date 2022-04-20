@@ -1,0 +1,39 @@
+@charset "UTF-8";
+
+h1 {
+	margin-left: 50px; 
+	margin-top:40px;
+	font-size:80px;
+
+}
+
+body { 
+	background-image : url("Background.JPG"); 
+	background-repeat: no-repeat;
+  	background-size: 1450px 720px;
+}
+
+
+.menuButton {
+	background-color : Transparent;
+	margin-left: 40px;
+	margin-right: 70px;
+	margin-top:80px;
+	border: none;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.MSButton {
+	background-color : #ff9900; 
+	margin-left: 160px; 
+	margin-right: 160px; 
+	height:150px;
+	width:250px;
+	border-radius:15px;  
+	font-size: 70px;
+	color: white;
+	border-color:#a4603a;
+	box-shadow: 3px 3px #c15738;
+	
+}
