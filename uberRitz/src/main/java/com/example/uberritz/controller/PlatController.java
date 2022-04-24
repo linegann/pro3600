@@ -22,22 +22,11 @@ public class PlatController {
     @Autowired
     private PlatService platService;
 
-    /**
-     * Create - Add a new employee
-     * @param plat An object employee
-     * @return The employee object saved
-     */
     @PostMapping("/plat")
     public Plat createPlat(@RequestBody Plat plat) {
         return platService.savePlat(plat);
     }
 
-
-    /**
-     * Read - Get one employee
-     * @param id The id of the employee
-     * @return An Employee object full filled
-     */
     @GetMapping("/plat/{id}")
     public Plat getPlat(@PathVariable("id") final Long id) {
         Optional<Plat> plat = platService.getPlat(id);
@@ -48,21 +37,10 @@ public class PlatController {
         }
     }
 
-    /**
-     * Read - Get all plats
-     * @return - An Iterable object of Plat full filled
-     */
     @GetMapping("/plats")
     public Iterable<Plat> getPlats() {
         return platService.getPlats();
     }
-
-    /**
-     * Update - Update an existing employee
-     * @param id - The id of the plat to update
-     * @param plat - The plat object updated
-     * @return
-     */
     
     @PutMapping("/plat/{id}")
     public Plat updatePlat(@PathVariable("id") final Long id, @RequestBody Plat plat) {
@@ -85,12 +63,6 @@ public class PlatController {
         }
     }
     
-    
-
-    /**
-     * Delete - Delete a plat
-     * @param id - The id of the plat to delete
-     */
     @DeleteMapping("/plat/{id}")
     public void deletePlat(@PathVariable("id") final Long id) {
         platService.deletePlat(id);
