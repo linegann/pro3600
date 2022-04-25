@@ -18,9 +18,9 @@
     <tr th:if="${plats.empty}">
         <td colspan="3">Aucun plat en base de données</td>
     </tr>
-    <tr th:each="employee: ${plats}">
-        <td><span th:text="${employee.nom}"> Prénom </span></td>
-        <td><span th:text="${employee.prix}"> Nom </span></td>
+    <tr th:each="plat: ${plats}">
+        <td><span th:text="${plat.nom}"> Nom </span></td>
+        <td><span th:text="${plat.prix}"> Prix </span></td>
     </tr>
     </tbody>
 </table>
