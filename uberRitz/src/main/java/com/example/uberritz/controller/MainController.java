@@ -75,4 +75,5 @@ public class MainController {
         model.addAttribute("plato", plat);
         return "savePlat";
     }
+	
 }

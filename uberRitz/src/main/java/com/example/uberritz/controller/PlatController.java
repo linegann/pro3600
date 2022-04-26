@@ -25,6 +25,11 @@ public class PlatController {
         return platService.savePlat(plat);
     }
 
+    @GetMapping("/plats")
+    public Iterable<Plat> getPlats() {
+        return platService.getPlats();
+    }
+
     @GetMapping("/plat/{id}")
     public Plat getPlat(@PathVariable("id") final Long id) {
         Optional<Plat> plat = platService.getPlat(id);
@@ -35,11 +40,6 @@ public class PlatController {
         }
     }
 
-    @GetMapping("/plats")
-    public Iterable<Plat> getPlats() {
-        return platService.getPlats();
-    }
-    
     @PutMapping("/plat/{id}")
     public Plat updatePlat(@PathVariable("id") final Long id, @RequestBody Plat plat) {
         Optional<Plat> p = platService.getPlat(id);
@@ -60,8 +60,8 @@ public class PlatController {
             return null;
         }
     }
-    
-    @DeleteMapping("/plat/{id}")
+
+	@DeleteMapping("/plat/{id}")
     public void deletePlat(@PathVariable("id") final Long id) {
         platService.deletePlat(id);
     }

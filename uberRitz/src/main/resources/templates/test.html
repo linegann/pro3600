@@ -3,12 +3,16 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Plat Web Application</title>
+    <title>Liste des plats</title>
 </head>
-<body>
+<body> 
 <h2 class="h2">Liste des plats</h2>
+<div class="d-grid gap-5 d-md-flex justify-content-md-end">
+    <a href="savePlat"> 
+    <button style="background-color : Transparent;" >Enregistrer un nouveau plat</button></a>
+  </div>
 <table>
-    <thead>
+    <thead>         
     <tr>
         <th>Nom</th>
         <th>Prix</th>
@@ -20,12 +24,12 @@
     </tr>
     <tr th:each="plat: ${plats}">
         <td th:text="${plat.nom}"> Nom></td>
-        <td th:text="${plat.prix}"> Prix></td>
+        <td th:text="${plat.prix}"> Prix></td>  
         <td>
-        <a th:href="@{'/plat/' + ${plat.id}}">Edit</a>
-        </td>   
-        <td>
-        <a th:href="@{'/plat/' + ${plat.id}}">Delete</a>
+        <form action="#" th:action="@{'/plat/{id}'(id=${plat.id})}" th:method="DELETE" >
+            <input type="hidden" name="_method" value="DELETE" />
+            <button type="submit" id="submitButton">Delete</button>
+        </form>
         </td>  
     </tr>
     
