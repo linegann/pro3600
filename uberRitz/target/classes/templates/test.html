@@ -19,9 +19,16 @@
         <td colspan="3">Aucun plat en base de données</td>
     </tr>
     <tr th:each="plat: ${plats}">
-        <td><span th:text="${plat.nom}"> Nom </span></td>
-        <td><span th:text="${plat.prix}"> Prix </span></td>
+        <td th:text="${plat.nom}"> Nom></td>
+        <td th:text="${plat.prix}"> Prix></td>
+        <td>
+        <a th:href="@{'/plat/' + ${plat.id}}">Edit</a>
+        </td>   
+        <td>
+        <a th:href="@{'/plat/' + ${plat.id}}">Delete</a>
+        </td>  
     </tr>
+    
     </tbody>
 </table>
 </body>
